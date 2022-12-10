@@ -1,7 +1,7 @@
 # The JavaScript Clock
 Language: JavaScript
 ## Task
-Create a webpage that displays the current time using the JS Date class.
+Create a webpage that displays the current date and time using the JS Date class.
 ## Skills Demonstrated
 - Date class
 - setInterval
