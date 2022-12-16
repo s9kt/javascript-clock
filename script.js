@@ -1,4 +1,11 @@
 let date = new Date();
+let running = true;
+let time;
+let s = 0;
+let m = 0;
+let h = 0;
+let interval;
+// document.getElementById("stop").style.visibility='hidden';
 
 function setTime() {
   date = new Date();
@@ -34,6 +41,40 @@ function setDate() {
   }
   let f = weekDays[w] + " " + months[m] + " " + d + ", " + y
   return f;
+}
+function stopWatch() {
+    s++;
+    if(s == 60) {
+      m++;
+      s = 0;
+    }
+    if(m == 60){
+      h++;
+      m = 0;
+    }
+  time = h + ":" + m + ":" + s;
+  return time;
+}
+function init() {
+  interval = setInterval(() => {
+  document.getElementById("stopWatch").innerText = stopWatch();
+}, 1000);
+  document.getElementById('start').style.visibility= 'hidden';
+  document.getElementById('stop').style.visibility= 'visible';
+  document.getElementById("reset").style.visibility='hidden';
+}
+function reset() {
+  term();
+  s = 0;
+  m = 0;
+  h = 0;
+  document.getElementById("stopWatch").innerText = h + ":" + m + ":" + s;
+}
+function term() {
+  clearInterval(interval);
+  document.getElementById('start').style.visibility= 'visible';
+  document.getElementById('stop').style.visibility= 'hidden';
+  document.getElementById("reset").style.visibility='visible';
 }
 setInterval(() => {
   document.getElementById("clock").innerText = setTime();
