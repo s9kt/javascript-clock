@@ -10,6 +10,14 @@
 <body>
 <p id ="clock" class="top"></p>
 <p id="date" class="bottom"></p>
+<p id ="stopWatch" class="bottom"></p>
+<button id="start" onclick="init()">Start Stopwatch</button>
+<button id="stop" onclick="term()">Stop Stopwatch</button>
+<button id="reset" onclick="reset()">Reset Stopwatch</button>
+  <script>
+    document.getElementById("stop").style.visibility='hidden';
+    document.getElementById("reset").style.visibility='hidden';
+  </script>
 </body>
 
 </html>
