@@ -5,7 +5,6 @@ let s = 0;
 let m = 0;
 let h = 0;
 let interval;
-// document.getElementById("stop").style.visibility='hidden';
 
 function setTime() {
   date = new Date();
