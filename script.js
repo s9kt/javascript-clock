@@ -5,6 +5,7 @@ let s = 0;
 let m = 0;
 let h = 0;
 let interval;
+// document.getElementById("stop").style.visibility='hidden';
 
 function setTime() {
   date = new Date();
@@ -35,9 +36,7 @@ function setDate() {
   if (d < 10) {
     d = "0" + d;
   }
-  if (m < 10) {
-    m = "0" + m;
-  }
+  
   let f = weekDays[w] + " " + months[m] + " " + d + ", " + y
   return f;
 }
